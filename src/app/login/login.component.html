@@ -1,0 +1,41 @@
+<div class="card text-white bg-info mb-3" style="max-width: 50rem;">
+    <div class="card-header">
+        Login
+    </div>
+    <div class="card-body text-white">
+        <form [formGroup]="login" (ngSubmit)="OnSaveData()">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="row mt-2">
+                            <div class="col-md-4">
+                                <label class="form-label">Login ID:</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" formControlName="loginId">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row mt-2">
+                            <div class="col-md-4">
+                                <label class="form-label">Password:</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" formControlName="password">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+    </div>
+    <div class="card-footer">
+        <div class="form-group">
+            <button type="button" class="btn btn-sm" (click)="OnSaveData()">Submit</button>
+            <button type="reset" class="btn btn-sm" (click)="onReset()">Reset</button>
+        </div>
+    </div>
+</div>
